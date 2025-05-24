@@ -59,5 +59,5 @@ class MovieCollection:
             for movie in movies:
                 print(f" - {movie}")
 
-    def __iter__(self) -> Iterator[Movie]:
+    def __iter__(self) -> Iterator[Movie]: #итератор. если мы перебираем значения из объекта Movie, перебираем значения из self.movies
         return iter(self.movies.values())
