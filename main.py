@@ -1,7 +1,12 @@
 from classes import Movie, MovieCollection
+from cinema_data import data_movies
 
 def main():
     collection = MovieCollection()
+
+    # Загружаем подборку фильмов из cinema_data.py
+    for movie in data_movies:
+        collection.add_movie(movie)
 
     while True: #пока цикл выполняется, давать выбор пользователю при взаимодйствии с программой
         print("\n====== Меню ======")
